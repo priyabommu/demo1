@@ -1,349 +1,80 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-@media only screen and (max-device-width: 500px) {
-        .container{
-         flex-direction: column !important;
-         max-width: 400px !important;
-         height: 670px !important;
-         margin-left:1% !important;
-         border-radius: 6px;
-       
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Share</title>
+  <style>
+    body {
+      margin: 0;
+      background: lightblue;
+      font-family: system-ui;
+      color: rebeccapurple;
+      padding: 20px;
     }
-    a:-webkit-any-link {
-        cursor: none;
+    img {
+      width: 100%;
     }
-    .footer{
-		margin-top:3%;
-		height:80px !important;
-		background:grey;
-		text-align:center;
-	}
-	.footer>h1{
-		font-size:18px;
-		color:white;
-		padding:30px !important;
-	}
-	.footer>h1>a{
-		text-decoration:none;
-		
-	}
-	
-}
-
-
-
-
-body{
-    margin: 0px;
-    padding: 0px;
-    background: #f1f1f1;
-    font-family: arial;
-    box-sizing: border-box;
+    main {
+      max-width: 320px;
+      margin: 20px auto;
+      border: 5px dashed lightseagreen;
+      height: calc(100vh - 80px);
+      border-radius: 10px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 5px lightslategray;
     }
-    .container{
-		width: 380px;
-		height: 620px;
-		background: white;
-		border-radius: 5px;
-		position: absolute;
-		top: 50%;
-		left: 53%;
-		transform: translate(-50%,-50%);
-		box-shadow: 0px 1px 10px 1px #000;
-		overflow: hidden;
-		display: inline-block;
+    button {
+      background: lightcoral;
+      padding: 10px 20px 12px;
+      color: white;
+      border-radius: 30px;
+      width: 100%;
+      border: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      -webkit-appearance: none;
+      font-weight: bold;
+      outline: 0;
+      cursor: pointer;
+      box-shadow: inset 0px -2px 0 2px black;
     }
-    .upper-container{
-		height:40%;
-		position: relative; 
-		left: 0;
-		top: 0;
+    button:active {
+      transform: scale(.9);
     }
-    .circle {
-		display: block;
-		width: 150px;
-		height: 150px;
-		margin: 1em auto;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		-webkit-border-radius: 99em;
-		-moz-border-radius: 99em;
-		border-radius: 99em;
-		border: 5px solid #eee;
-		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-		position:relative;
-		top:-65%;
-	}
-	.details{
-		margin-top:12% !important;
-		text-align:center !important;
-	}
-	.details>h1{
-		font-size:30px !important;
-	}
-	.details>h5{
-		font-size:12px !important;
-		margin-top:-5%;
-	}
-	.social-icon{
-		flex-direction:row;
-		
-	}
-	.social-icon>a{
-		margin-left:5%;
-	}
-	.social-icon>a>img{
-		width:50px;
-		height:50px;
-	}
-	.qrcode{
-		text-align:center;
-	}
-	.btn{
-		margin-top:-2%;
-		border:none;
-		width:40% !important;
-		height:50px;
-		color:white;
-		background-color:grey;
-		font-size:20px;
-		border-radius:30px;
-		text-align:center;
-		margin-left:30%;
-		box-shadow: 0 13px 26px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.16);
-	}
-	.footer{
-		margin-top:3%;
-		height:60px;
-		background:grey;
-		text-align:center;
-	}
-	.footer>h1{
-		font-size:18px;
-		color:white;
-		padding:15px;
-	}
-	.footer>h1>a{
-		text-decoration:none;
-		color:lightblue;
-	}
-</style>
+  </style>
 </head>
 <body>
-		<div class="container">
-			<div class="upper-container">
-					<img src="banner.jpg" style="width:100%;height:100%;position:relative;top:0;left:0">
-					<button id="shareButton" onclick="share(this)">
-					<i style="margin-left:-9%;margin-top:-4%"><img src="share.png" style="position:relative;width:50px;height:50px;"></i>
-					<i class="fas fa-times"></i>
-					<div class="container1">
-						<div class="addthis_inline_share_toolbox"></div>
-						<div class="addthis_sharing_toolbox"></div>
-					</div>
-					</button>
-					<img src="msg.png" style="position:relative;width:50px;height:50px;margin-top:-7% !important;left:-10%">	
-					<div class="circle" style="background-image:url('profile.jpg')"></div>
-			</div>
-			<div class="details">
-			<h1>Santhanu</h1>
-			<h5>Event Oraganistation</h5>
-			</div>
-			<div class="social-icon">
-				<a href="tel:+91 79044 15327"><img src="call.png"></a>
-				<a href="https://api.whatsapp.com/send?phone=+917904415327"><img src="whatsapp.png"></a>
-				<a href="mailto:shanmugapriyabs06@gmail.com"><img src="mail.png"></a>
-				<a href="https://www.facebook.com/jnaveen.anban"><img src="fb.png"></a>
-				<a href="https://www.instagram.com/invites/contact/?i=13sw1zt1ol86u&utm_content=2gnv6ey"><img src="insta.png"></a>
-			</div>
-			<div class="qrcode">
-				<img src="qr.jpeg" style="width:100px;height:100px">
-			</div>
-			<button class="btn">View Gallery</button>
-			<div class="footer">
-				<h1>Designed by <a href="http://kishorebabu.rekchosoftware.com/">Rekcho</a></h1>
-			</div>	
-		</div>
-<style>
-  #shareButton {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  border-radius: 50%;
-  border: 0;
-  outline: 0;
-  background:grey;
-  color: #fff;
-  margin-top:-10% !important;
-  left:85% !important;
-  cursor: pointer;
-  transition: 0.3s;
-  -webkit-tap-highlight-color: transparent;
-}
-
-
-#shareButton i {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 1.0em;
-  top: 1.0em;
-  transition:0.6s;
-}
-
-#shareButton > .container1 {
-  position: absolute;
-  width: 200px;
-  background: hsl(0, 40%, 95%);
-  bottom: 10% !important;
-  right: 0;
-  top:15% !important; 
-  padding: 8px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  transform: translateY(10%);
-}
-
-#shareButton.showAddThisButtons > .container1 {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.addthis_inline_share_toolbox,
-.addthis_sharing_toolbox {
-  text-align: right;
-}
-
-#shareButton:after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
-  border: 0 solid #fff;
-  border-radius: 50%;
-  border-width: 2px 0 0 2px;
-  border-left-color: transparent;
-  animation: loading-share-buttons 1s cubic-bezier(0.4, 0.6, 0.4, 0.6) infinite;
-  animation-play-state: paused;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-#shareButton.loading:after {
-  animation-play-state: running;
-  opacity: 1;
-}
-
-#shareButton i.fa-times {
-  opacity: 0;
-  left: 1.22em;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-#shareButton.showAddThisButtons i.fa-share-alt {
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-#shareButton.showAddThisButtons i.fa-times {
-  opacity: 1;
-  transform: translate(-50%, -50%) rotate(360deg);
-}
-
-@keyframes loading-share-buttons {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-  </style>
-<script>
-var AddThisJSLoaded = false; //AddThis not loaded yet
-var clickedOnShare = false; //share button is not clicked
-
-//replace with your publisher ID
-//it's in your profile setting
-var AddThisPubID = "ra-5b056b31a239b6eb";
-var AddThisJS = "//s7.addthis.com/js/300/addthis_widget.js#pubid=" + AddThisPubID;
-
-function share(button) {
-  if (navigator.share) {
-    //check if Web Share API is supported by the browser
-    var url = document.location.href;
-    var title = document.getElementsByTagName("title")[0].innerHTML;
-    var description = document
-      .querySelector("meta[name=description]")
-      .getAttribute("content");
-
-    navigator.share({
-      title: title,
-      text: description,
-      url: url
-    });
-  } else {
-    if (!AddThisJSLoaded && !clickedOnShare) {
-      //when AddThis not loaded and share button isn't clicked
-      clickedOnShare = true; //share button is clicked
-      showLoading(button);
-      shareByAddThis(button);
+  <main>
+    <section>
+      <img src="share.png" alt="">
+    </section>
+    <h4><em>Hoy es un buen día para compartir conocimiento...</em></h4>
+    <button id="button">Compartir</button>
+  </main>
+  <script>
+    const $button = document.querySelector('#button')
+    if ('share' in navigator) {
+      $button.addEventListener('click', share)
+      function share() {
+        navigator.share({
+          title: 'Probando Share API',
+          text: 'Suscríbete a Youtube.com/LeonidasEsteban',
+          url: './thumb.jpg',
+        })
+        .then(()=>{
+          alert('hemos logrado compartir')
+        })
+        .catch(()=>{
+          alert('no se pudo compartir, prueba usando https en un navegador móvil')
+        })
+      }
     } else {
-      toggleAddThisButtons(button);
+      alert('No está disponible el API de web share')
     }
-  }
-}
-
-function shareByAddThis(button) {
-  var script = document.createElement("script");
-  script.async = true;
-  script.src = AddThisJS;
-
-  script.onload = function() {
-    clickedOnShare = false; //AddThis JS is loaded
-    addthis.user.ready(function(data) {
-      AddThisJSLoaded = true; //AddThis loaded and ready to use
-      hideLoading(button);
-      showAddThisButtons(button);
-    });
-  };
-
-  script.onerror = function() {
-    clickedOnShare = false; //AddThis JS failed to load
-    hideLoading(button);
-  };
-
-  document.body.appendChild(script);
-}
-
-function showLoading(button) {
-  button.classList.add("loading");
-}
-
-function hideLoading(button) {
-  button.classList.remove("loading");
-}
-
-function showAddThisButtons(button) {
-  button.classList.add("showAddThisButtons");
-}
-
-function toggleAddThisButtons(button) {
-  button.classList.toggle("showAddThisButtons");
-}
-
-</script>
-
-
-
+  </script>
 </body>
 </html>
-
-
